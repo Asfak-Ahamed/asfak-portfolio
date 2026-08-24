@@ -39,7 +39,7 @@ function App(){
           <h1>Asfak <span>Ahamed</span><br/><strong>Frontend Developer.</strong></h1>
           <p className="hero-text">A Computer Science graduate focused on building responsive, user-friendly web applications with React.js, JavaScript and modern frontend technologies.</p>
           <div className="actions"><a className="btn primary" href="#projects">View Projects <b>↗</b></a><a className="btn" href="/Asfak_Ahamed_CV.pdf" download>Download Resume ↓</a><a className="btn" href="https://linkedin.com/in/asfak-ahamed7" target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
-          <div className="quick"><span>📍 Madurai, Tamil Nadu</span><span>🎓 B.E. CSE · 7.6 CGPA</span></div>
+          <div className="quick"><span>📍 Madurai, Tamil Nadu</span><span>🎓 B.E. CSE · 7.8 CGPA</span></div>
         </div>
         <div className="hero-card">
           <div className="orb orb1"/><div className="orb orb2"/>
@@ -48,7 +48,7 @@ function App(){
         </div>
       </section>
 
-      <section id="About" className="section container"><SectionTitle num="01" title="About me" sub="A graduate who enjoys turning ideas into interfaces."/><div className="about-grid"><div className="about-copy"><p>I recently completed my B.E. in Computer Science and Engineering from Sethu Institute of Technology. I'm focused on frontend development and enjoy creating responsive interfaces that are simple to use and easy to maintain.</p><p>My practical work includes React applications, REST API integration, e-commerce functionality and CRUD operations. My UI/UX training also helps me think about the experience behind the code.</p><p>Outside development, I served as a Class Lead in the Rotaract Club, where I coordinated members and supported event execution.</p></div><div className="stats"><Stat n="7.6" l="CGPA · CSE"/><Stat n="2026" l="Graduate"/><Stat n="3" l="React projects"/><Stat n="3" l="Certifications"/></div></div></section>
+      <section id="About" className="section container"><SectionTitle num="01" title="About me" sub="A graduate who enjoys turning ideas into interfaces."/><div className="about-grid"><div className="about-copy"><p>I recently completed my B.E. in Computer Science and Engineering from Sethu Institute of Technology. I'm focused on frontend development and enjoy creating responsive interfaces that are simple to use and easy to maintain.</p><p>My practical work includes React applications, REST API integration, e-commerce functionality and CRUD operations. My UI/UX training also helps me think about the experience behind the code.</p><p>Outside development, I served as a Class Lead in the Rotaract Club, where I coordinated members and supported event execution.</p></div><div className="stats"><Stat n="7.8" l="CGPA · CSE"/><Stat n="2026" l="Graduate"/><Stat n="3" l="React projects"/><Stat n="3" l="Certifications"/></div></div></section>
 
       <section id="Skills" className="section alt"><div className="container"><SectionTitle num="02" title="Skills & tools" sub="Technologies I use to build and learn."/><div className="skill-grid">{skills.map(([name,type])=><div className="skill" key={name}><div><strong>{name}</strong><small>{type}</small></div><span>↗</span></div>)}</div></div></section>
 
