@@ -138,12 +138,12 @@ function HeroSection() {
         </p>
 
         <div className="actions">
-          <a className="btn primary" href="#projects">
+          <a className="btn primary" href="#Projects">
             View Projects <b>↗</b>
           </a>
-          <a className="btn" href="/Asfak_Ahamed_CV.pdf" download>
-            Download Resume ↓
-          </a>
+         <a className="btn" href="/asfak-portfolio/Asfak_Ahamed_CV.pdf" download>
+  Download Resume ↓
+     </a>
           <a
             className="btn"
             href="https://linkedin.com/in/asfak-ahamed7"
