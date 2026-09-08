@@ -32,11 +32,12 @@ const projects = [
     tags: ['React JS', 'JavaScript', 'CSS', 'REST APIs'],
   },
   {
-    n: '03',
-    title: 'React CRUD User Management',
-    text: 'A user management application implementing Create, Read, Update and Delete operations with REST API integration and a responsive interface.',
-    tags: ['React JS', 'REST APIs', 'CRUD', 'JavaScript'],
-  },
+  n: '03',
+  title: 'React CRUD User Management',
+  text: 'A user management application implementing Create, Read, Update and Delete operations with REST API integration and a responsive interface.',
+  tags: ['React JS', 'REST APIs', 'CRUD', 'JavaScript'],
+  live: 'https://asfak-ahamed.github.io/react-user-management-system/',
+},
 ];
 
 const NAV_LINKS = ['About', 'Skills', 'Projects', 'Journey', 'Contact'];
@@ -267,10 +268,20 @@ function ProjectsSection() {
           <article className="project" key={p.n}>
             <div className="project-no">{p.n}</div>
             <div className="project-body">
-              <div className="project-top">
-                <h3>{p.title}</h3>
-                <span>↗</span>
-              </div>
+            <div className="project-top">
+  <h3>{p.title}</h3>
+
+  {p.live && (
+    <a
+      href={p.live}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={`View ${p.title} live`}
+    >
+      ↗
+    </a>
+  )}
+</div>
               <p>{p.text}</p>
               <div className="tags">
                 {p.tags.map((t) => (
