@@ -7,15 +7,15 @@ import './styles.css';
 // ---------------------------------------------------------------------------
 
 const skills = [
-  ['React JS', 'Frontend'],
-  ['JavaScript', 'Frontend'],
-  ['HTML', 'Frontend'],
-  ['CSS', 'Frontend'],
-  ['REST APIs', 'Backend integration'],
-  ['Java', 'Programming'],
-  ['SQL', 'Database'],
-  ['GitHub', 'Version control'],
-  ['UI/UX', 'Figma'],
+  ['React JS', 'Frontend', 90],
+  ['JavaScript', 'Frontend', 90],
+  ['HTML', 'Frontend', 95],
+  ['CSS', 'Frontend', 92],
+  ['REST APIs', 'Backend integration', 85],
+  ['Java', 'Programming', 87],
+  ['SQL', 'Database', 88],
+  ['GitHub', 'Version control', 88],
+  ['UI/UX', 'Figma', 70],
 ];
 
 const projects = [
@@ -177,7 +177,15 @@ function HeroSection() {
                 literal characters (not real newlines), matching the original
                 source exactly, so reformatting this across lines is avoided
                 to prevent JSX whitespace collapsing from changing the output. */}
-            <code><b>const</b> developer = {'{'}\n  name: <mark>"Asfak Ahamed A"</mark>,\n  role: <mark>"Frontend Developer"</mark>,\n  stack: [<mark>"React"</mark>, <mark>"JavaScript"</mark>],\n  focus: <mark>"Clean UI + UX"</mark>,\n  mindset: <mark>"Build. Learn. Improve."</mark>\n{'}'}</code>
+            <code>
+              <b>const</b> developer = {'{'}<br />
+              &nbsp;&nbsp;name: <mark>"Asfak Ahamed A"</mark>,<br />
+              &nbsp;&nbsp;role: <mark>"Frontend Developer"</mark>,<br />
+              &nbsp;&nbsp;stack: [<mark>"React"</mark>, <mark>"JavaScript"</mark>],<br />
+              &nbsp;&nbsp;focus: <mark>"Clean UI + UX"</mark>,<br />
+              &nbsp;&nbsp;mindset: <mark>"Build. Learn. Improve."</mark><br />
+              {'}'}
+            </code>
           </pre>
         </div>
 
@@ -191,37 +199,204 @@ function HeroSection() {
 }
 
 function AboutSection() {
+  const [aboutTab, setAboutTab] = useState("technical");
+
   return (
     <section id="About" className="section container">
       <SectionTitle
         num="01"
         title="About me"
-        sub="A graduate who enjoys turning ideas into interfaces."
+        sub="A quick look at the developer behind the code."
       />
 
-      <div className="about-grid">
-        <div className="about-copy">
-          <p>
-            I recently completed my B.E. in Computer Science and Engineering from Sethu
-            Institute of Technology. I'm focused on frontend development and enjoy creating
-            responsive interfaces that are simple to use and easy to maintain.
-          </p>
-          <p>
-            My practical work includes React applications, REST API integration,
-            e-commerce functionality and CRUD operations. My UI/UX training also helps me
-            think about the experience behind the code.
-          </p>
-          <p>
-            Outside development, I served as a Class Lead in the Rotaract Club, where I
-            coordinated members and supported event execution.
-          </p>
+      <div className="about-hud">
+        <article className="about-profile-card">
+          <div className="about-card-top">
+            <span className="about-card-label">PROFILE // 001</span>
+            <span className="about-live"><i /> ONLINE</span>
+          </div>
+
+          <div className="about-identity">
+            <div className="about-avatar">AA</div>
+            <div>
+              <h3>Asfak Ahamed</h3>
+              <span>Frontend Developer</span>
+            </div>
+          </div>
+
+          <div className="about-intro">
+            <span className="about-command">&gt; whoami</span>
+            <p>
+              I recently completed my B.E. in Computer Science and Engineering from
+              Sethu Institute of Technology. I'm focused on frontend development and
+              enjoy creating responsive interfaces that are simple to use and easy to maintain.
+            </p>
+          </div>
+
+          <div className="about-details">
+            <div>
+              <small>EDUCATION</small>
+              <strong>B.E. Computer Science</strong>
+            </div>
+            <div>
+              <small>STATUS</small>
+              <strong>Open to Opportunities</strong>
+            </div>
+          </div>
+
+          <div className="about-tags">
+            <span>React</span>
+            <span>REST APIs</span>
+            <span>Git & GitHub</span>
+            <span>UI/UX</span>
+          </div>
+        </article>
+
+        <article className="about-console">
+          <div className="about-console-head">
+            <div className="about-tabs">
+              <button
+                type="button"
+                className={`about-tab ${aboutTab === "technical" ? "active" : ""}`}
+                data-active={aboutTab === "technical"}
+                onClick={() => setAboutTab("technical")}
+              >
+                &lt;/&gt; Technical Skills
+              </button>
+              <button
+                type="button"
+                className={`about-tab ${aboutTab === "soft" ? "active" : ""}`}
+                data-active={aboutTab === "soft"}
+                onClick={() => setAboutTab("soft")}
+              >
+                ✦ Soft Skills
+              </button>
+            </div>
+            <span className="about-console-dots">● ● ●</span>
+          </div>
+
+          <div className="about-console-body">
+            {aboutTab === "technical" ? (
+              <>
+                <div className="about-terminal-line">
+                  <span className="prompt">$</span> developer.profile --skills
+                </div>
+
+                <div className="about-skill-matrix">
+                  <div className="about-skill-item">
+                    <div><span>React JS</span><b>90%</b></div>
+                    <i><em style={{ width: "90%" }} /></i>
+                  </div>
+                  <div className="about-skill-item">
+                    <div><span>JavaScript</span><b>90%</b></div>
+                    <i><em style={{ width: "90%" }} /></i>
+                  </div>
+                  <div className="about-skill-item">
+                    <div><span>HTML / CSS</span><b>94%</b></div>
+                    <i><em style={{ width: "94%" }} /></i>
+                  </div>
+                  <div className="about-skill-item">
+                    <div><span>Java / SQL</span><b>88%</b></div>
+                    <i><em style={{ width: "88%" }} /></i>
+                  </div>
+                  <div className="about-skill-item">
+                    <div><span>REST APIs</span><b>85%</b></div>
+                    <i><em style={{ width: "85%" }} /></i>
+                  </div>
+                  <div className="about-skill-item">
+                    <div><span>UI / UX</span><b>70%</b></div>
+                    <i><em style={{ width: "70%" }} /></i>
+                  </div>
+                </div>
+
+                <div className="about-code-note">
+                  <span>01</span>
+                  <p>
+                    Practical work includes React applications, REST API integration,
+                    e-commerce functionality and CRUD operations.
+                  </p>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="about-terminal-line">
+                  <span className="prompt">$</span> developer.profile --soft-skills
+                </div>
+
+                <div className="about-soft-grid">
+                  <div className="about-soft-card">
+                    <span className="about-soft-icon">⌁</span>
+                    <div>
+                      <small>01 // STRENGTH</small>
+                      <h3>Problem Solving</h3>
+                      <p>Break problems into clear, practical steps.</p>
+                    </div>
+                  </div>
+
+                  <div className="about-soft-card">
+                    <span className="about-soft-icon">↯</span>
+                    <div>
+                      <small>02 // STRENGTH</small>
+                      <h3>Quick Learner</h3>
+                      <p>Adapt quickly to new tools and technologies.</p>
+                    </div>
+                  </div>
+
+                  <div className="about-soft-card">
+                    <span className="about-soft-icon">◎</span>
+                    <div>
+                      <small>03 // STRENGTH</small>
+                      <h3>Team Collaboration</h3>
+                      <p>Communicate, contribute and work well with a team.</p>
+                    </div>
+                  </div>
+
+                  <div className="about-soft-card">
+                    <span className="about-soft-icon">◉</span>
+                    <div>
+                      <small>04 // STRENGTH</small>
+                      <h3>Attention to Detail</h3>
+                      <p>Care about clean interfaces and polished results.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="about-code-note soft-note">
+                  <span>02</span>
+                  <p>
+                    Mindset: stay curious, communicate clearly, and keep improving
+                    through practical projects.
+                  </p>
+                </div>
+              </>
+            )}
+          </div>
+        </article>
+      </div>
+
+      <div className="about-bottom-grid">
+        <div className="about-mini-card">
+          <span className="about-mini-icon">01</span>
+          <div>
+            <small>FOCUS</small>
+            <strong>Clean UI + UX</strong>
+          </div>
         </div>
 
-        <div className="stats">
-          <Stat n="7.8" l="CGPA · CSE" />
-          <Stat n="2026" l="Graduate" />
-          <Stat n="3" l="React projects" />
-          <Stat n="3" l="Certifications" />
+        <div className="about-mini-card">
+          <span className="about-mini-icon">02</span>
+          <div>
+            <small>MINDSET</small>
+            <strong>Build · Learn · Improve</strong>
+          </div>
+        </div>
+
+        <div className="about-mini-card">
+          <span className="about-mini-icon">03</span>
+          <div>
+            <small>LEADERSHIP</small>
+            <strong>Class Lead · Rotaract Club</strong>
+          </div>
         </div>
       </div>
     </section>
@@ -239,13 +414,28 @@ function SkillsSection() {
         />
 
         <div className="skill-grid">
-          {skills.map(([name, type]) => (
-            <div className="skill" key={name}>
-              <div>
+          {skills.map(([name, type, percentage]) => (
+            <div
+              className="skill"
+              key={name}
+              style={{ '--skill-level': `${percentage}%` }}
+            >
+              <div className="skill-main">
                 <strong>{name}</strong>
                 <small>{type}</small>
               </div>
-              <span>↗</span>
+
+              <div className="skill-meter">
+                <div className="skill-meter-top">
+                  <span>PROFICIENCY</span>
+                  <b>{percentage}%</b>
+                </div>
+                <div className="skill-bar">
+                  <i />
+                </div>
+              </div>
+
+              <span className="skill-arrow">↗</span>
             </div>
           ))}
         </div>
@@ -306,28 +496,99 @@ function JourneySection() {
           sub="The experiences that shaped my development path."
         />
 
-        <div className="timeline">
-          <Timeline
-            year="2022 — 2026"
-            title="B.E. Computer Science & Engineering"
-            text="Sethu Institute of Technology · CGPA 7.6"
-          />
-          <Timeline
-            year="Training"
-            title="Full Stack Web Development"
-            text="OCTANET · Novitech R&D Pvt Ltd"
-          />
-          <Timeline year="Training" title="UI/UX Design" text="Novitech R&D Pvt Ltd" />
-          <Timeline
-            year="Certifications"
-            title="Full Stack Development · Cloud Computing · Core Java"
-            text="Udemy & NPTEL"
-          />
-          <Timeline
-            year="Leadership"
-            title="Class Lead · Rotaract Club"
-            text="Coordinated members and supported event execution."
-          />
+        <div className="journey-hub">
+          <article className="journey-feature">
+            <div className="journey-feature-top">
+              <span className="journey-badge">ACADEMIC FOUNDATION</span>
+              <span className="journey-index">01</span>
+            </div>
+
+            <div className="journey-feature-grid">
+              <div>
+                <span className="journey-kicker">2022 — 2026</span>
+                <h3>B.E. Computer Science & Engineering</h3>
+                <p>
+                  Sethu Institute of Technology · CGPA 7.6
+                </p>
+              </div>
+
+              <div className="journey-degree">
+                <span>DEGREE</span>
+                <strong>B.E.</strong>
+                <small>Computer Science</small>
+              </div>
+            </div>
+
+            <div className="journey-progress">
+              <div>
+                <span>EDUCATION PATH</span>
+                <b>COMPLETED</b>
+              </div>
+              <i><em /></i>
+            </div>
+          </article>
+
+          <div className="journey-grid">
+            <article className="journey-mini">
+              <div className="journey-mini-icon">⌘</div>
+              <div className="journey-mini-head">
+                <span>TRAINING // 02</span>
+                <b>01</b>
+              </div>
+              <h3>Full Stack Web Development</h3>
+              <p>OCTANET · Novitech R&D Pvt Ltd</p>
+              <span className="journey-chip">WEB DEVELOPMENT</span>
+            </article>
+
+            <article className="journey-mini">
+              <div className="journey-mini-icon">◇</div>
+              <div className="journey-mini-head">
+                <span>TRAINING // 03</span>
+                <b>02</b>
+              </div>
+              <h3>UI/UX Design</h3>
+              <p>Novitech R&D Pvt Ltd</p>
+              <span className="journey-chip">DESIGN</span>
+            </article>
+
+            <article className="journey-mini">
+              <div className="journey-mini-icon">&lt;/&gt;</div>
+              <div className="journey-mini-head">
+                <span>CERTIFICATIONS // 04</span>
+                <b>03</b>
+              </div>
+              <h3>Full Stack · Cloud · Core Java</h3>
+              <p>Udemy & NPTEL</p>
+              <span className="journey-chip">CERTIFIED</span>
+            </article>
+
+            <article className="journey-mini">
+              <div className="journey-mini-icon">✦</div>
+              <div className="journey-mini-head">
+                <span>LEADERSHIP // 05</span>
+                <b>04</b>
+              </div>
+              <h3>Class Lead · Rotaract Club</h3>
+              <p>Coordinated members and supported event execution.</p>
+              <span className="journey-chip">LEADERSHIP</span>
+            </article>
+          </div>
+
+          <div className="journey-status">
+            <div className="journey-status-left">
+              <span className="journey-status-dot" />
+              <div>
+                <small>CURRENT STATUS</small>
+                <strong>Open to Work — Actively Seeking Opportunities</strong>
+              </div>
+            </div>
+
+            <div className="journey-status-tags">
+              <span>Full-Time</span>
+              <span>Internship</span>
+              <span>Remote / On-Site</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
