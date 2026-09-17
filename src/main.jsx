@@ -225,7 +225,7 @@ function AboutSection() {
           </div>
 
           <div className="about-intro">
-            <span className="about-command">&gt; whoami</span>
+            <span className="about-command">&gt; Who Am I</span>
             <p>
               I recently completed my B.E. in Computer Science and Engineering from
               Sethu Institute of Technology. I'm focused on frontend development and
