@@ -508,7 +508,7 @@ function JourneySection() {
                 <span className="journey-kicker">2022 — 2026</span>
                 <h3>B.E. Computer Science & Engineering</h3>
                 <p>
-                  Sethu Institute of Technology · CGPA 7.6
+                  Sethu Institute of Technology · CGPA 7.8
                 </p>
               </div>
 
