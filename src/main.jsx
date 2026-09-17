@@ -217,7 +217,9 @@ function AboutSection() {
           </div>
 
           <div className="about-identity">
-            <div className="about-avatar">AA</div>
+            <div className="about-avatar">
+  <img src="/asfak-portfolio/profile.jpeg" alt="Asfak Ahamed" />
+</div>
             <div>
               <h3>Asfak Ahamed</h3>
               <span>Frontend Developer</span>
